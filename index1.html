@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Gradient Button by Komal</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Styling -->
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #f0c27b, #4b1248);
+      color: #fff;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+      font-size: 2rem;
+    }
+
+    .gradient-btn {
+      background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff7eb3);
+      border: none;
+      padding: 15px 40px;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+      background-size: 300% 300%;
+      animation: gradientMove 3s infinite linear;
+    }
+
+    .gradient-btn:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Animated Gradient Button 🌈</h1>
+    <button class="gradient-btn" onclick="showMessage()">Click Me!</button>
+    <p id="message"></p>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function showMessage() {
+      const message = document.getElementById("message");
+      message.innerText = "🎉 Thanks for clicking! You rock, contributor! 🎉";
+    }
+  </script>
+
+</body>
+
+</html>
